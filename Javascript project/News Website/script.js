@@ -2,7 +2,7 @@
 
 const API_KEY = "a95d6c752174400aa96d5d61729b702e";
 
-const url_key = "https://newsapi.org/v2/everything?q=";
+const url = "https://newsapi.org/v2/everything?q=";
 
 // const API_KEY = "1d3a0eefa97b499d8fbc4ee93eeb40b7";
 // const url = "https://newsapi.org/v2/everything?q=";
@@ -14,7 +14,7 @@ function reload() {
 }
 
 async function fetchNews(query) {
-  const res = await fetch(`${url_key}${query}&apiKey=${API_KEY}`);
+  const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
   const data = await res.json();
   bindData(data.articles);
 }
